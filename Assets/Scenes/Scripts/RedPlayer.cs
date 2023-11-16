@@ -32,16 +32,13 @@ public class RedPlayer : MonoBehaviour
 
         rb.velocity = velocity;
 
-        var position = transform.position;
-        if(position.y > 4.07f)
+        if (transform.position.y > 4.07f)
         {
-            position.y = 4.07f;
+            transform.position = new Vector3(transform.position.x, 4.07f, 0);
         }
-        else if(position.y < -4.07f)
+        else if (transform.position.y < -4.07f)
         {
-            position.y = -4.07f;
+            transform.position = new Vector3(transform.position.x, -4.07f, 0);
         }
-
-        transform.position = position;
     }
 }
