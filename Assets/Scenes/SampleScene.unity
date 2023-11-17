@@ -408,7 +408,7 @@ Transform:
   m_GameObject: {fileID: 877253756}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.619, y: 0, z: 0}
   m_LocalScale: {x: 1.6, y: 1.6, z: 1.6}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -502,8 +502,8 @@ GameObject:
   - component: {fileID: 898148890}
   - component: {fileID: 898148892}
   m_Layer: 0
-  m_Name: Red_Player
-  m_TagString: RedPlayer
+  m_Name: RedPlayer
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -659,6 +659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a9c42cd709c3e6428c568e5e8d80f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
 --- !u!1 &1272604161
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,8 +751,8 @@ GameObject:
   - component: {fileID: 1341924435}
   - component: {fileID: 1341924437}
   m_Layer: 0
-  m_Name: Blue_Player
-  m_TagString: BluePlayer
+  m_Name: BluePlayer
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -5,9 +5,11 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private RedPlayer _redPlayer;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        _redPlayer = GameObject.Find("RedPlayer").GetComponent<RedPlayer>();
         Invoke("GoBall", 2);
     }
 
@@ -21,7 +23,7 @@ public class Ball : MonoBehaviour
         float rand = Random.Range(0, 2);
         if (rand < 1)
         {
-            rb.AddForce(new Vector2(20, -15));
+            rb.AddForce(new Vector2(20, 15));
         }
         else
         {
@@ -37,7 +39,10 @@ public class Ball : MonoBehaviour
             vel.x = rb.velocity.x;
             vel.y = (rb.velocity.y / 2) + (coll.collider.attachedRigidbody.velocity.y / 3);
             rb.velocity = vel;
+             
         }
+
+        
     }
 
     void ResetBall()

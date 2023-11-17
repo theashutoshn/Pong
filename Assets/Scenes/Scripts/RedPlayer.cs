@@ -6,6 +6,7 @@ public class RedPlayer : MonoBehaviour
 {
     private float _speed = 10f;
     private Rigidbody2D rb;
+    public int score;
 
     void Start()
     {
@@ -40,5 +41,10 @@ public class RedPlayer : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, -4.07f, 0);
         }
+    }
+
+    public void RedScore()
+    {
+        score += 10;
     }
 }
