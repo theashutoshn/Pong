@@ -7,13 +7,14 @@ public class Ball : MonoBehaviour
     private Rigidbody2D rb;
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         Invoke("GoBall", 2);
     }
 
     // Update is called once per frame
     void Update()
     {
-        rb = GetComponent<Rigidbody2D>();
+        
     }
     void GoBall()
     {
@@ -37,5 +38,17 @@ public class Ball : MonoBehaviour
             vel.y = (rb.velocity.y / 2) + (coll.collider.attachedRigidbody.velocity.y / 3);
             rb.velocity = vel;
         }
+    }
+
+    void ResetBall()
+    {
+        rb.velocity = new Vector2(0, 0);
+        transform.position = Vector2.zero;
+    }
+
+    void RestartGame()
+    {
+        ResetBall();
+        Invoke("GoBall", 1);
     }
 }
